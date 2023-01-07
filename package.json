@@ -1,15 +1,8 @@
 {
-  "name": "vscode-styled-components",
-  "displayName": "vscode-styled-components",
-  "description": "Syntax highlighting for styled-components",
+  "name": "vscode-react-native-skia",
+  "description": "Syntax highlighting for React Native Skia",
   "version": "1.7.6",
-  "publisher": "styled-components",
-  "icon": "logo.png",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/styled-components/vscode-styled-components.git"
-  },
   "main": "dist/extension.js",
   "engines": {
     "vscode": "^1.70.0"
@@ -31,21 +24,7 @@
     "onCommand:extension.insertColonOrSemiColon"
   ],
   "contributes": {
-    "languages": [
-      {
-        "id": "source.css.styled",
-        "aliases": [
-          "CSS (Styled Components)"
-        ],
-        "configuration": "./css.styled.configuration.json"
-      }
-    ],
     "grammars": [
-      {
-        "language": "source.css.styled",
-        "scopeName": "source.css.styled",
-        "path": "./syntaxes/css.styled.json"
-      },
       {
         "injectTo": [
           "source.js",
@@ -57,30 +36,10 @@
           "source.svelte"
         ],
         "scopeName": "skia",
-        "path": "./syntaxes/styled-components.json",
+        "path": "./syntaxes/skia.json",
         "embeddedLanguages": {
-          "source.css.scss": "css",
           "meta.embedded.line.ts": "typescript"
         }
-      }
-    ],
-    "typescriptServerPlugins": [
-      {
-        "name": "@styled/typescript-styled-plugin",
-        "enableForWorkspaceTypeScriptVersions": true
-      }
-    ],
-    "commands": [
-      {
-        "command": "extension.insertColonOrSemiColon",
-        "title": "Fix Colon and Semicolon"
-      }
-    ],
-    "keybindings": [
-      {
-        "command": "extension.insertColonOrSemiColon",
-        "key": "enter",
-        "when": "suggestWidgetVisible && textInputFocus && editorLangId =~ /javascript|typescript|javascriptreact|typescriptreact/ && config.editor.acceptSuggestionOnEnter != 'off'"
       }
     ]
   },
