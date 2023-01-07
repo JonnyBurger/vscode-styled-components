@@ -23,8 +23,7 @@
     "compile": "node ./build.js",
     "test": "node ./src/tests/runTests.js",
     "watch": "node ./build.js --watch",
-    "vscode:prepublish": "node ./build.js --production",
-    "prepare": "husky install"
+    "vscode:prepublish": "node ./build.js --production"
   },
   "activationEvents": [
     "onLanguage:typescriptreact",
@@ -57,7 +56,7 @@
           "source.vue",
           "source.svelte"
         ],
-        "scopeName": "styled",
+        "scopeName": "skia",
         "path": "./syntaxes/styled-components.json",
         "embeddedLanguages": {
           "source.css.scss": "css",
@@ -85,13 +84,8 @@
       }
     ]
   },
-  "dependencies": {
-    "d3-color": "^3.1.0",
-    "@styled/typescript-styled-plugin": "^0.20.0",
-    "vscode-css-languageservice": "^6.2.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@types/d3-color": "^3.1.0",
     "@types/glob": "^7.2.0",
     "@types/mocha": "^9.0.0",
     "@types/node": "^18.11.9",
@@ -99,8 +93,6 @@
     "@vscode/test-electron": "^2.2.0",
     "esbuild": "^0.15.16",
     "glob": "7.1.6",
-    "husky": "^7.0.4",
-    "mocha": "^9.2.1",
     "prettier": "^2.8.0",
     "typescript": "^4.9.3"
   }
